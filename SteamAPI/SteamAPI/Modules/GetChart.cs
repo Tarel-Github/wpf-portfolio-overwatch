@@ -30,12 +30,9 @@ namespace SteamAPI.Modules
             string Tag = tag.Text;
             string Name = input.Text;
 
-            string ApiUrl = $"https://ow-api.com/v1/stats/pc/kr/{Name}-{Tag}/complete";       // 공개 유저
-            //string ApiUrl = "https://ow-api.com/v1/stats/pc/kr/네잎클로바-31564  31635/complete";       // 비공개 유저
+            string ApiUrl = $"https://ow-api.com/v1/stats/pc/kr/{Name}-{Tag}/complete";
 
             string result = string.Empty;
-
-            // WebRequest, WebResponse 객체
             WebRequest req = null;
             WebResponse res = null;
             StreamReader reader = null;
