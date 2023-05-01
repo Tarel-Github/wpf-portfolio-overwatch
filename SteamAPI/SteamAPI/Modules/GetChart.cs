@@ -59,8 +59,6 @@ namespace SteamAPI.Modules
 
             var jsonResult = JObject.Parse(result);
             var status = Convert.ToInt32(jsonResult["status"]);
-
-            Debug.WriteLine(jsonResult);
             
             try
             {
@@ -87,8 +85,6 @@ namespace SteamAPI.Modules
                 }
 
                 var comp_Hero = new List<Hero>();
-                Debug.WriteLine("1111111111111111111");
-                Debug.WriteLine(Convert.ToString(heroArray));
 
                 foreach (var hero in heroArray)
                 {
