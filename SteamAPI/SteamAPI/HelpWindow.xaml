@@ -38,6 +38,9 @@
                     <LineBreak/>
                     <LineBreak/>
                     <Run Text="탱커는 파란색, 힐러는 초록색, 딜러는 빨간색으로 표시됍니다."/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Text="경쟁전 전적만 검색 가능합니다."/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>

@@ -21,7 +21,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
-            <Label Content="오버워치 전적 탐색기(도움말 참조)" VerticalAlignment="Center" HorizontalAlignment="Center"
+            <Label Content="오버워치 경쟁전 전적 탐색기(도움말 참조)" VerticalAlignment="Center" HorizontalAlignment="Center"
                    FontSize="30" FontWeight="Bold"/>
         </Grid>
 
