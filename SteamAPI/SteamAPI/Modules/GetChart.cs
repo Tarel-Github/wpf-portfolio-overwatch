@@ -30,8 +30,6 @@ namespace SteamAPI.Modules
             string Tag = tag.Text;
             string Name = input.Text;
 
-            Debug.WriteLine(Tag, Name);
-
             string ApiUrl = $"https://ow-api.com/v1/stats/pc/kr/{Name}-{Tag}/complete";       // 공개 유저
             //string ApiUrl = "https://ow-api.com/v1/stats/pc/kr/네잎클로바-31564  31635/complete";       // 비공개 유저
 
@@ -48,8 +46,6 @@ namespace SteamAPI.Modules
                 res = await req.GetResponseAsync();
                 reader = new StreamReader(res.GetResponseStream());
                 result = reader.ReadToEnd();
-
-                Debug.WriteLine(result);
             }
             catch (Exception ex)
             {
@@ -108,7 +104,6 @@ namespace SteamAPI.Modules
                             hero.name, hero.timePlayed, hero.avg_dmg, hero.avg_heal, hero.winrate, hero.KPL);
                 }
 
-                Debug.WriteLine("asdasdasdasdsad");
                 string usertimePlayed = Convert.ToString(jsonResult["competitiveStats"]["careerStats"]["allHeroes"]["game"]["timePlayed"]);
                 var userWin = comp_AllHero_Data["allHeroes"]["game"]["gamesWon"];
                 var userlose = comp_AllHero_Data["allHeroes"]["game"]["gamesLost"];
@@ -118,7 +113,6 @@ namespace SteamAPI.Modules
                 // 유저 이름, 유저 테그, 전체 플레이타임, 유저 승률, 플레이어 아이콘
                 getUserInfo(profileimg, time, rate, Lbl_Name, Lbl_Tag, Convert.ToString(PlayerName), Tag, userWinrate, img, playTime);
 
-                Debug.WriteLine("asdasdasdasdsad");
             }
             catch (Exception ex)
             {
